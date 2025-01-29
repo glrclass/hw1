@@ -146,6 +146,7 @@ CREATE TABLE actors (
     actor_name TEXT
 );
 
+
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
@@ -218,6 +219,9 @@ INNER JOIN studios ON studios.id = movies.studio_id;
 .print "========"
 .print ""
 
-
 -- The SQL statement for the cast output
 -- TODO!
+
+SELECT movies.movie_name, characters. characters.character_name
+FROM movies
+INNER JOIN characters ON characters.movie_id = movies.id;
