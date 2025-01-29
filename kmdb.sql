@@ -201,7 +201,7 @@ VALUES
 (3, 11, "Selina Kyle");
 
 
-SELECT * FROM actors;
+SELECT * FROM characters;
 
 -- Prints a header for the movies output
 .print "Movies"
