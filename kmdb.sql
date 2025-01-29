@@ -123,7 +123,7 @@ DROP TABLE IF EXISTS characters;
 
 CREATE TABLE studios (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  studio_name TEXT,
+  studio_name TEXT
 );
 
 CREATE TABLE movies (
@@ -131,24 +131,31 @@ CREATE TABLE movies (
   movie_name TEXT,
   year_released INTEGER,
   rating TEXT,
-  studio_id INTEGER,
+  studio_id INTEGER
 );
 
 CREATE TABLE characters (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     character_name TEXT,
     actor_id INTEGER,
-    movie_id INTEGER,
+    movie_id INTEGER
 );
 
 CREATE TABLE actors (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    actor_name TEXT,
+    actor_name TEXT
 );
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
+
+INSERT INTO studios (
+    studio_name
+)
+VALUES (
+  "Warner Bros."
+);
 
 -- Prints a header for the movies output
 .print "Movies"
