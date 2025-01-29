@@ -161,15 +161,44 @@ INSERT INTO movies (
   movie_name, year_released, rating, studio_id
 )
 VALUES 
-("Batman Begins", 2005, "PG-13", 1),
-("The Dark Knight", 2008, "PG-13,", 1),
-("The Dark Knight Rises", 2012, "PG-13", 1);
+("Batman Begins", 2005, "PG-13", 1), --1
+("The Dark Knight", 2008, "PG-13,", 1), --2
+("The Dark Knight Rises", 2012, "PG-13", 1); --3
 
 INSERT INTO actors (
   actor_name)
-VALUES ("Christian Bale"), ("Heath Ledger"), ("Tom Hardy"), ("Michael Caine"), ("Gary Oldman"), ("Liam Neeson"), ("Katie Holmes"), ("Aaron Eckhart"), ("Maggie Gyllenhaal"), ("Anne Hathaway");
+VALUES 
+("Christian Bale"), --1
+("Michael Caine"), --2
+("Liam Neeson"), --3
+("Katie Holmes"), --4
+("Gary Oldman"), --5
+("Heath Ledger"), --6
+("Aaron Eckhart"), --7
+("Maggie Gyllenhaal"), --8
+("Tom Hardy"), --9
+("Joseph Gordon-Levitt"), --10
+("Anne Hathaway"); --11
 
-INSERT INTO characters
+INSERT INTO characters (
+  movie_id, actor_id, character_name
+)
+VALUES 
+(1, 1, "Bruce Wayne"),
+(1, 2, "Alfred"),
+(1, 3, "Ra's Al Ghul"),
+(1, 4, "Rachel Dawes"),
+(1, 5, "Commissioner Gordon"),
+(2, 1, "Bruce Wayne"),
+(2, 6, "Joker"),
+(2, 7, "Harvey Dent"),
+(2, 2, "Alfred"),
+(2, 8, "Rachel Dawes"),
+(3, 1, "Bruce Wayne"),
+(3, 5, "Commissioner Gordon"),
+(3, 9, "Bane"),
+(3, 10, "John Blake"),
+(3, 11, "Selina Kyle");
 
 
 SELECT * FROM actors;
