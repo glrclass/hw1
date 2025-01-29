@@ -108,7 +108,7 @@
 
 -- Turns column mode on but headers off
 .mode column
-.headers off
+.headers on
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
@@ -156,6 +156,23 @@ INSERT INTO studios (
 VALUES (
   "Warner Bros."
 );
+
+INSERT INTO movies (
+  movie_name, year_released, rating, studio_id
+)
+VALUES 
+("Batman Begins", 2005, "PG-13", 1),
+("The Dark Knight", 2008, "PG-13,", 1),
+("The Dark Knight Rises", 2012, "PG-13", 1);
+
+INSERT INTO actors (
+  actor_name)
+VALUES ("Christian Bale"), ("Heath Ledger"), ("Tom Hardy"), ("Michael Caine"), ("Gary Oldman"), ("Liam Neeson"), ("Katie Holmes"), ("Aaron Eckhart"), ("Maggie Gyllenhaal"), ("Anne Hathaway");
+
+INSERT INTO characters
+
+
+SELECT * FROM actors;
 
 -- Prints a header for the movies output
 .print "Movies"
