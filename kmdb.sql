@@ -162,7 +162,7 @@ INSERT INTO movies (
 )
 VALUES 
 ("Batman Begins", 2005, "PG-13", 1), --1
-("The Dark Knight", 2008, "PG-13,", 1), --2
+("The Dark Knight", 2008, "PG-13", 1), --2
 ("The Dark Knight Rises", 2012, "PG-13", 1); --3
 
 INSERT INTO actors (
@@ -200,9 +200,6 @@ VALUES
 (3, 10, "John Blake"),
 (3, 11, "Selina Kyle");
 
-
-SELECT * FROM characters;
-
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
@@ -210,6 +207,10 @@ SELECT * FROM characters;
 
 -- The SQL statement for the movies output
 -- TODO!
+
+SELECT movies.movie_name, movies.year_released, movies.rating, studios.studio_name
+FROM movies
+INNER JOIN studios ON studios.id = movies.studio_id;
 
 -- Prints a header for the cast output
 .print ""
